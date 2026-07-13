@@ -10,7 +10,7 @@ class Dezycro < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Dezycro/cli-releases/releases/download/v3.0.0/dezycro_3.0.0_darwin_amd64.tar.gz"
-      sha256 "9bb95dec3a990d40124677647fea7a5d6c525ba215d8f6f2f50acf8175bc151e"
+      sha256 "a56505115b89d97f4c540e3deba80300f9540a9692eb05e18518346155d570d7"
 
       define_method(:install) do
         libexec.install "dezycro", "skills", "prompts", "hooks", ".claude-plugin"
@@ -19,7 +19,7 @@ class Dezycro < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Dezycro/cli-releases/releases/download/v3.0.0/dezycro_3.0.0_darwin_arm64.tar.gz"
-      sha256 "b161594e1c2835318bcb9f198449732b4e2b410f1c2d34a57d1d770cf9877f20"
+      sha256 "3a0519a93c57fc480f29791aea8084dd60ace6ce93bfe226789b211ea62bf10d"
 
       define_method(:install) do
         libexec.install "dezycro", "skills", "prompts", "hooks", ".claude-plugin"
@@ -31,7 +31,7 @@ class Dezycro < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Dezycro/cli-releases/releases/download/v3.0.0/dezycro_3.0.0_linux_amd64.tar.gz"
-      sha256 "7c104c0c7dccd3ac965cf1a785e319cd4c76af86ea7ddc3fce5d15f2e85da63b"
+      sha256 "6540ad65af6a539f69465e64b0b06abf5e79a8a24d20e387482a96ec47466a8d"
       define_method(:install) do
         libexec.install "dezycro", "skills", "prompts", "hooks", ".claude-plugin"
         bin.write_exec_script libexec/"dezycro"
@@ -39,7 +39,7 @@ class Dezycro < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Dezycro/cli-releases/releases/download/v3.0.0/dezycro_3.0.0_linux_arm64.tar.gz"
-      sha256 "1d1cad244d1fda2e0d00e280adf74320dfe74e0e79303282310b91a7ebe8d3f7"
+      sha256 "3673435a235507da106fa42b1fe016c96a81f44e2d97bdbbc9816f590ae962ed"
       define_method(:install) do
         libexec.install "dezycro", "skills", "prompts", "hooks", ".claude-plugin"
         bin.write_exec_script libexec/"dezycro"
