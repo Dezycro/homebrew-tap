@@ -5,12 +5,12 @@
 class Dezycro < Formula
   desc "Dezycro for AI coding agents"
   homepage "https://dezycro.ai"
-  version "3.2.1"
+  version "3.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Dezycro/cli-releases/releases/download/v3.2.1/dezycro_3.2.1_darwin_amd64.tar.gz"
-      sha256 "1bbc637bee6527946f1abee4a054701aa0763ae68e335203f185e674bd89caaa"
+      url "https://github.com/Dezycro/cli-releases/releases/download/v3.3.0/dezycro_3.3.0_darwin_amd64.tar.gz"
+      sha256 "4e909cfa0b4035a763c8f8b7ccc4af6c4fd08db42ad8570921678a5f9e3755cc"
 
       define_method(:install) do
         libexec.install "dezycro", "skills", "prompts", "hooks", ".claude-plugin"
@@ -18,8 +18,8 @@ class Dezycro < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Dezycro/cli-releases/releases/download/v3.2.1/dezycro_3.2.1_darwin_arm64.tar.gz"
-      sha256 "de3a7c252b6478d8ec064e7315914bf9ba74bb7041e2b67785820e486fc39e55"
+      url "https://github.com/Dezycro/cli-releases/releases/download/v3.3.0/dezycro_3.3.0_darwin_arm64.tar.gz"
+      sha256 "07cca434b74e1be1b5830466ddef6cfe460f1a21d370b973ab959c528ee43e21"
 
       define_method(:install) do
         libexec.install "dezycro", "skills", "prompts", "hooks", ".claude-plugin"
@@ -30,16 +30,16 @@ class Dezycro < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dezycro/cli-releases/releases/download/v3.2.1/dezycro_3.2.1_linux_amd64.tar.gz"
-      sha256 "813e8740d465d0423a3e1dd521afa4580ab1027eae7b01b6a7b4ee10f35ac5e7"
+      url "https://github.com/Dezycro/cli-releases/releases/download/v3.3.0/dezycro_3.3.0_linux_amd64.tar.gz"
+      sha256 "17e7d6ddfb25c2422902db433c1953cb69e511a70408bd6fa0a6cfa48081abf9"
       define_method(:install) do
         libexec.install "dezycro", "skills", "prompts", "hooks", ".claude-plugin"
         bin.write_exec_script libexec/"dezycro"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dezycro/cli-releases/releases/download/v3.2.1/dezycro_3.2.1_linux_arm64.tar.gz"
-      sha256 "5e31c611c7eae8fe7940926fadbee2fe078419e1299cefb77df628cfc689d5a9"
+      url "https://github.com/Dezycro/cli-releases/releases/download/v3.3.0/dezycro_3.3.0_linux_arm64.tar.gz"
+      sha256 "8db813d509893b02280ca4d9852f149fa80e2f89cbbb8bb5e49aaa70dc029522"
       define_method(:install) do
         libexec.install "dezycro", "skills", "prompts", "hooks", ".claude-plugin"
         bin.write_exec_script libexec/"dezycro"
